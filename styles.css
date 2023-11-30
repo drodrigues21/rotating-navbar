@@ -1,0 +1,136 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   height: 100vh;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 10px;
+   background-color: #2d2d2d;
+   margin: 0;
+   overflow-x: hidden;
+}
+
+img {
+   max-width: 100%;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+}
+
+p {
+   font-size: 1.2em;
+   line-height: 1.5em;
+   letter-spacing: 1px;
+}
+
+a {
+   text-decoration: none;
+}
+
+.wrap {
+   height: 100vh;
+   position: relative;
+}
+
+.container {
+   background-color: #fff;
+   padding: 3em;
+   transform-origin: top left;
+   transition: transform 800ms;
+}
+
+.content {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 2rem 0;
+}
+
+.title {
+   font-size: 2.75em;
+}
+
+
+h2 {
+   margin-top: 2em;
+}
+
+/* Hamburger */
+.hamburger {
+   position: fixed;
+   width: 12em;
+   height: 12em;
+   top: -5em;
+   left: -5em;
+   background-color: #ff7d6d;
+   border-radius: 50%;
+   transition: transform 800ms ease;
+   cursor: pointer;
+   z-index: 10;
+}
+
+.menu {
+   position: absolute;
+}
+
+.menu-open {
+   bottom: 2em;
+   right: 3em;
+}
+
+.menu-close {
+   bottom: 2em;
+   left: 2em;
+}
+
+.hamburger.open {
+   transform: rotate(-90deg);
+}
+
+/* Navbar */
+.navbar {
+   position: absolute;
+   bottom: 4em;
+   left: 0;
+   padding: 0 0 0 3em;
+   background: #2d2d2d;
+   z-index: -10;
+}
+
+.links li {
+   display: flex;
+   align-items: center;
+   gap: 1em;
+   margin-bottom: 2em;
+
+   transform: translateX(-10em);
+   opacity: 0;
+   transition: transform 1000ms ease;
+}
+
+.links li a {
+   font-size: 1.5em;
+   font-weight: 600;
+   color: #fff;
+}
+
+.about {
+   margin-left: 1.5em;
+}
+
+.contact {
+   margin-left: 3em;
+}
+
+/* Show navbar */
+.container.show-menu {
+   transform: rotate(-18deg);
+
+}
+
+.links li.fade-links {
+   transform: translateX(0);
+   opacity: 1;
+}
